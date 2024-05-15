@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import { NavigationMenuDemo } from "./_components/navigation-menu";
 
 import { GeistSans } from "geist/font/sans";
 
@@ -15,7 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <div className="flex w-full justify-center">
+          <NavigationMenuDemo />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
